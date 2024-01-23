@@ -34,7 +34,7 @@ describe('GHT', () => {
         cy.get('#input_1').should('be.empty').type('Juan')
         cy.get('#input_2').should('be.empty').type('Andres')
         cy.get('#input_3').should('be.empty').type('juanandres@yopmail.com')
-        cy.get('body > ui-view > div > div > div:nth-child(4) > ui-view > div > div:nth-child(2) > div > div > ul > li:nth-child(2) > div > div:nth-child(2) > div > div.row > div > div.row.ng-scope > div.col-md-9 > div > label.switch.col-md-4 > span').click()
+        cy.get('body > ui-view > div > div > div:nth-child(4) > ui-view > div > div:nth-child(2) > div > div > ul > li:nth-child(2) > div > div:nth-child(2) > div > div.row > div > div.row.ng-scope > div.col-md-9 > div > label.switch.col-md-4 > span').should('be.visible').click()
         cy.get('#input_4').type(pass)
         cy.get('#input_5').type(pass)
         cy.get('.btnSave').click();
